@@ -1,0 +1,23 @@
+{
+  "widgets": [
+    {
+      "name": "TaskNotesWidget",
+      "label": "Add Notes",
+      "widget_type": "popup",
+      "location": {
+        "Tasks.detail.view": {
+          "button": {
+            "label": "Add Notes"
+          }
+        }
+      },
+      "oauthScopes": [
+        "ZohoCRM.modules.ALL",
+        "ZohoCRM.settings.ALL"
+      ],
+      "url": "widget.html",
+      "height": 400,
+      "width": 300
+    }
+  ]
+}
