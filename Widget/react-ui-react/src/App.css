@@ -1,0 +1,200 @@
+.App-header {
+  min-height: 50vh;
+  font-size: large;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  /* width: 90%; */
+  background: white;
+}
+
+@media (min-width: 320px) {
+  .App {
+    width: 300px;
+  }
+}
+
+@media (min-width: 480px) {
+  .App {
+    width: 480px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+input,
+select {
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+button {
+  padding: 14px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 25px 20px;
+    width: 300px;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+.multi-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.selected-options {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 20px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  background-color: #fff;
+  gap: 6px;
+  position: relative;
+  margin-top: 8px;
+}
+
+.selected-options .placeholder {
+  color: #888;
+}
+
+.selected-options .tag {
+  background-color: #007bff;
+  color: white;
+  padding: 0 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  height: fit-content;
+  max-height: 30px;
+}
+
+.selected-options .tag button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.selected-options .arrow {
+  margin-left: auto;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1000;
+  border-radius: 0 0 4px 4px;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-option.selected {
+  background-color: #e6f0ff;
+}
+
+@media (max-width: 480px) {
+  .selected-options {
+  min-height: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 13px;
+}
+}
